@@ -16,9 +16,11 @@
   <link rel="stylesheet" href="node_modules/weathericons/css/weather-icons-wind.min.css">
   <link rel="stylesheet" href="node_modules/summernote/dist/summernote-bs4.css">
 
+
   <!-- Template CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
+  
 </head>
 
 <body>
@@ -186,9 +188,9 @@
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
-              <li class="active"><a class="nav-link" href="index.html"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
+              <li><a class="nav-link" href="index.html"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
               <li class="menu-header">Starter</li>
-              <li><a class="nav-link" href="satuan-pendidik.html"><i class="fa-solid fa-school"></i> <span>Satuan Pendidikan</span></a></li>
+              <li class="active"><a class="nav-link" href="satuan-pendidik.html"><i class="fa-solid fa-school"></i> <span>Satuan Pendidikan</span></a></li>
               <li><a class="nav-link" href="peserta-didik.html"><i class="fa-solid fa-user-group"></i> <span>Peserta Didik</span></a></li>
               <li><a class="nav-link" href="laporan.html"><i class="fa-solid fa-file-lines"></i> <span>Laporan</span></a></li>
               <li><a class="nav-link" href="calon-penerima.html"><i class="fa-solid fa-user-check"></i> <span>Calon Penerima</span></a></li>
@@ -199,105 +201,23 @@
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
-          <div class="section-header">
-            <h1>Dashboard</h1>
-          </div>
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-primary">
-                  <i class="far fa-user"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Satuan Pendidik</h4>
-                  </div>
-                  <div class="card-body">
-                    76
-                  </div>
-                </div>
-              </div>
+            <div class="section-header">
+                <h1>Upload Data Excel Satuan Pendidikan</h1>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-danger">
-                  <i class="far fa-newspaper"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Peserta Didik</h4>
+            <div class="row">
+                <div class="col-12">
+                  <div class="card card-success">
+                    <div class="card-body">
+                      <p>File (.xls, .xlsx)</p>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                      <a href="#" class="btn btn-icon icon-left btn-primary mt-3"><i class="fa-solid fa-arrow-up-from-bracket"></i> Upload</a>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    4443
-                  </div>
                 </div>
-              </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-warning">
-                  <i class="far fa-file"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Peserta Beasiswa</h4>
-                  </div>
-                  <div class="card-body">
-                    4443
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-success">
-                  <i class="fas fa-circle"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Calon Penerima</h4>
-                  </div>
-                  <div class="card-body">
-                    2539
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md">
-              <div class="card">
-                <div class="card-header bg-primary text-light">
-                  <h4>Kategori Beasiswa Stimulan Siswa</h4>
-                </div>
-                <div class="card-body">
-                  <ol style="list-style-type: upper-alpha;">
-                    <li>Beasiswa Stimulan Prestasi Akademik</li>
-                    <li>Beasiswa Stimulan Prestasi Non Akademik</li>
-                    <li>Beasiswa Sertifikasi</li>
-                    <li>Beasiswa Stimulan Khusus</li>
-                  </ol>
-                  <p class="font-weight-bold">* Beasiswa Stimulan Khusus Terdiri atas:</p>
-                  <ol>
-                    <li>Miskin</li>
-                    <li>Anak Berkebutuhan Khusus</li>
-                    <li>Daerah 3T</li>
-                    <li>Anak Dan Atau Cucu Veteran</li>
-                    <li>Anak Korban KDRT</li>
-                    <li>Hafidz Atau Hafidzah</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="alert alert-info">
-                Hubungi Tim Dukungan Teknis: 085246937000
-              </div>
-            </div>
-          </div>
-          
         </section>
       </div>
       <footer class="main-footer">
@@ -315,7 +235,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="js/stisla.js"></script>
-  <script src="https://kit.fontawesome.com/39f6e58ccc.js" crossorigin="anonymous"></script>
 
   <!-- JS Libraies -->
   <script src="node_modules/simpleweather/jquery.simpleWeather.min.js"></script>
@@ -324,10 +243,14 @@
   <script src="node_modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
   <script src="node_modules/summernote/dist/summernote-bs4.js"></script>
   <script src="node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="https://kit.fontawesome.com/39f6e58ccc.js" crossorigin="anonymous"></script>
 
   <!-- Template JS File -->
   <script src="js/scripts.js"></script>
   <script src="js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+  <!-- <script src="js/page/index-0.js"></script> -->
 
 </body>
 </html>

@@ -15,10 +15,21 @@
   <link rel="stylesheet" href="node_modules/weathericons/css/weather-icons.min.css">
   <link rel="stylesheet" href="node_modules/weathericons/css/weather-icons-wind.min.css">
   <link rel="stylesheet" href="node_modules/summernote/dist/summernote-bs4.css">
+  <link rel="stylesheet" href="node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css">
+
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    @media (max-width: 992px) {
+      .btn-grup{
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -188,10 +199,10 @@
               <li class="menu-header">Dashboard</li>
               <li><a class="nav-link" href="index.html"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
               <li class="menu-header">Starter</li>
-              <li class="active"><a class="nav-link" href="satuan-pendidik.html"><i class="far fa-square"></i> <span>Satuan Pendidikan</span></a></li>
-              <li><a class="nav-link" href="peserta-didik.html"><i class="far fa-square"></i> <span>Peserta Didik</span></a></li>
-              <li><a class="nav-link" href="laporan.html"><i class="far fa-square"></i> <span>Laporan</span></a></li>
-              <li><a class="nav-link" href="calon-penerima.html"><i class="far fa-square"></i> <span>Calon Penerima</span></a></li>
+              <li class="active"><a class="nav-link" href="satuan-pendidik.html"><i class="fa-solid fa-school"></i> <span>Satuan Pendidikan</span></a></li>
+              <li><a class="nav-link" href="peserta-didik.html"><i class="fa-solid fa-user-group"></i> <span>Peserta Didik</span></a></li>
+              <li><a class="nav-link" href="laporan.html"><i class="fa-solid fa-file-lines"></i> <span>Laporan</span></a></li>
+              <li><a class="nav-link" href="calon-penerima.html"><i class="fa-solid fa-user-check"></i> <span>Calon Penerima</span></a></li>
             </ul>
         </aside>
       </div>
@@ -203,85 +214,85 @@
                 <h1>Satuan Pendidikan</h1>
             </div>
             <div class="row">
-                <div class="col-md-6 mb-2">
-                    <a href="#" class="btn btn-icon icon-left btn-warning"><i class="fas fa-download"></i> Download Template Dokumen Satuan Pendidikan</a>
-                </div>
-                <div class="col-md mb-2">
-                    <a href="#" class="btn btn-icon icon-left btn-success"><i class="far fa-file"></i> Upload Excel Satuan Pendidikan</a>
-                </div>
-                <div class="col-md mb-2">
-                    <a href="#" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Tambah Satuan Pendidikan</a>
+                <div class="col-12 d-flex justify-content-between btn-grup">
+                    <a href="asset/template_satuan_pendidikan_ori.xlsx" class="btn btn-icon icon-left btn-warning align-self-center mb-2" download="template-satuan-pendidikan_ori"><i class="fas fa-download"></i> Download Template Dokumen Satuan Pendidikan</a>
+                    <a href="upload-satuan.html" class="btn btn-icon icon-left btn-success align-self-center mb-2"><i class="fa-solid fa-file-excel"></i> Upload Excel Satuan Pendidikan</a>
+                    <a href="tambah-satuan.html" class="btn btn-icon icon-left btn-primary align-self-center mb-2"><i class="far fa-edit"></i> Tambah Satuan Pendidikan</a>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md">
+                <div class="col-12">
                     <div class="card">
-                        <div class="card-header">
-                          <h4>Bordered</h4>
-                        </div>
                         <div class="card-body">
-                          <div class="section-title mt-0">Light</div>
-                          <table class="table table-bordered">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <div class="section-title">Dark</div>
-                          <table class="table table-bordered table-dark">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                            </tbody>
-                          </table>
+                          <div class="mb-5">
+                            <a href="#" class="btn btn-icon shadow-sm icon-left btn-success mr-4 mb-2"><i class="fa-solid fa-file-excel"></i> Excel</a>
+                            <a href="#" class="btn btn-icon shadow-sm icon-left btn-dark mb-2"><i class="fas fa-print"></i> Print</a>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table table-bordered table-satuan" id="table-1">
+                              <thead>
+                                <tr class="bg-primary">
+                                  <th>NO</th>
+                                  <th>SATUAN PENDIDIKAN</th>
+                                  <th>NPSN</th>
+                                  <th>NAMA OPERATOR</th>
+                                  <th>KONTAK OPERATOR</th>
+                                  <th>PASSWORD</th>
+                                  <th width="30%">ACTION</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="text-center">
+                                    1
+                                  </td>
+                                  <td>MI DARRUL MUTTAQIN</td>
+                                  <td>70029034</td>
+                                  <td>Ari Saputra, M.Pd</td>
+                                  <td>081254721794</td>
+                                  <td>99108904</td>
+                                  <td class="text-center">
+                                    <a href="#" class="btn btn-icon btn-success"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-icon btn-info"><i class="far fa-edit"></i></a>
+                                    <a href="#" class="btn btn-icon btn-warning"><i class="fas fa-print"></i></a>
+                                    <a href="#" class="btn btn-icon btn-danger"><i class="fas fa-trash"></i></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-center">
+                                    2
+                                  </td>
+                                  <td>MTSS NURUL MUSTHAFA AL HUSAINI</td>
+                                  <td>70029034</td>
+                                  <td>Ari Saputra, M.Pd</td>
+                                  <td>081254721794</td>
+                                  <td>99108904</td>
+                                  <td class="text-center">
+                                    <a href="#" class="btn btn-icon btn-success"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-icon btn-info"><i class="far fa-edit"></i></a>
+                                    <a href="#" class="btn btn-icon btn-warning"><i class="fas fa-print"></i></a>
+                                    <a href="#" class="btn btn-icon btn-danger"><i class="fas fa-trash"></i></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="text-center">
+                                    3
+                                  </td>
+                                  <td>MI DARRUL MUTTAQIN</td>
+                                  <td>70029034</td>
+                                  <td>Ari Saputra, M.Pd</td>
+                                  <td>081254721794</td>
+                                  <td>99108904</td>
+                                  <td class="text-center">
+                                    <a href="#" class="btn btn-icon btn-success"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-icon btn-info"><i class="far fa-edit"></i></a>
+                                    <a href="#" class="btn btn-icon btn-warning"><i class="fas fa-print"></i></a>
+                                    <a href="#" class="btn btn-icon btn-danger"><i class="fas fa-trash"></i></a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       </div>
                 </div>
@@ -312,12 +323,16 @@
   <script src="node_modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
   <script src="node_modules/summernote/dist/summernote-bs4.js"></script>
   <script src="node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="https://kit.fontawesome.com/39f6e58ccc.js" crossorigin="anonymous"></script>
+  <script src="node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+  <script src="node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js"></script>
 
   <!-- Template JS File -->
   <script src="js/scripts.js"></script>
   <script src="js/custom.js"></script>
 
   <!-- Page Specific JS File -->
-  <script src="js/page/index-0.js"></script>
+  <script src="js/page/modules-datatables.js"></script>
 </body>
 </html>

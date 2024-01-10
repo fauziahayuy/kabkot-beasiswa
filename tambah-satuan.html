@@ -16,9 +16,11 @@
   <link rel="stylesheet" href="node_modules/weathericons/css/weather-icons-wind.min.css">
   <link rel="stylesheet" href="node_modules/summernote/dist/summernote-bs4.css">
 
+
   <!-- Template CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
+  
 </head>
 
 <body>
@@ -186,9 +188,9 @@
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
-              <li class="active"><a class="nav-link" href="index.html"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
+              <li><a class="nav-link" href="index.html"><i class="fa-solid fa-gauge"></i> <span>Dashboard</span></a></li>
               <li class="menu-header">Starter</li>
-              <li><a class="nav-link" href="satuan-pendidik.html"><i class="fa-solid fa-school"></i> <span>Satuan Pendidikan</span></a></li>
+              <li class="active"><a class="nav-link" href="satuan-pendidik.html"><i class="fa-solid fa-school"></i> <span>Satuan Pendidikan</span></a></li>
               <li><a class="nav-link" href="peserta-didik.html"><i class="fa-solid fa-user-group"></i> <span>Peserta Didik</span></a></li>
               <li><a class="nav-link" href="laporan.html"><i class="fa-solid fa-file-lines"></i> <span>Laporan</span></a></li>
               <li><a class="nav-link" href="calon-penerima.html"><i class="fa-solid fa-user-check"></i> <span>Calon Penerima</span></a></li>
@@ -199,105 +201,102 @@
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
-          <div class="section-header">
-            <h1>Dashboard</h1>
-          </div>
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-primary">
-                  <i class="far fa-user"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Satuan Pendidik</h4>
-                  </div>
-                  <div class="card-body">
-                    76
-                  </div>
-                </div>
-              </div>
+            <div class="section-header">
+                <h1>Satuan Pendidikan</h1>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-danger">
-                  <i class="far fa-newspaper"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Peserta Didik</h4>
+            <div class="row">
+                <div class="col-12">
+                  <div class="card card-success">
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="name">Nama Satuan Pendidikan <strong class="text-danger">*</strong></label>
+                              <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="npsn">NPSN <strong class="text-danger">*</strong></label>
+                                <input type="number" class="form-control" id="npsn">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="bentuk_pdd">Bentuk Pendidikan <strong class="text-danger">*</strong></label>
+                                <select class="custom-select">
+                                    <option selected>--Pilih Bentuk Pendidikan--</option>
+                                    <option value="1">SLB</option>
+                                    <option value="2">SMA</option>
+                                    <option value="3">SMK</option>
+                                    <option value="4">SMAg.K</option>
+                                    <option value="5">SMTK</option>
+                                    <option value="6">MA</option>
+                                    <option value="7">MTS</option>
+                                    <option value="8">MI</option>
+                                    <option value="9">SD</option>
+                                    <option value="10">PKBM  </option>
+                                    <option value="11">SKB</option>
+                                    <option value="12">PESANTREN</option>
+                                  </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="bentuk_pdd">Status Sekolah <strong class="text-danger">*</strong></label>
+                                <select class="custom-select">
+                                    <option selected>--Pilih Status Sekolah--</option>
+                                    <option value="1">Negeri</option>
+                                    <option value="2">Swasta</option>
+                                  </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="alamat">Alamat <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="alamat">
+                            </div>  
+                            <div class="form-group col-md-6">
+                                <label for="kabkot">Kabupaten/Kota <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="kabkot">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="kecamatan">Kecamatan <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="kecamatan">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="kelurahan">Kelurahan/Desa <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="kelurahan">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="kode_pos">Kode Pos <strong class="text-danger">*</strong></label>
+                                <input type="number" class="form-control" id="kode_pos">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lintang">Lintang <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="lintang">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="bujur">Bujur <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="bujur">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="kepala_sekolah">Nama Kepala Sekolah <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="kepala_sekolah">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="operator">Nama Operator <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="operator">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email_operator">Email Operator <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="email_operator">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="no_operator">No Hp Operator <strong class="text-danger">*</strong></label>
+                                <input type="number" class="form-control" id="no_operator">
+                            </div>
+                        </div>
+
+                      <a href="#" class="btn btn-primary mt-3">Tambah</a>
+                      <a href="satuan-pendidik.html" class="btn btn-warning mt-3">Batal</a>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    4443
-                  </div>
                 </div>
-              </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-warning">
-                  <i class="far fa-file"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Peserta Beasiswa</h4>
-                  </div>
-                  <div class="card-body">
-                    4443
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-success">
-                  <i class="fas fa-circle"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Calon Penerima</h4>
-                  </div>
-                  <div class="card-body">
-                    2539
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md">
-              <div class="card">
-                <div class="card-header bg-primary text-light">
-                  <h4>Kategori Beasiswa Stimulan Siswa</h4>
-                </div>
-                <div class="card-body">
-                  <ol style="list-style-type: upper-alpha;">
-                    <li>Beasiswa Stimulan Prestasi Akademik</li>
-                    <li>Beasiswa Stimulan Prestasi Non Akademik</li>
-                    <li>Beasiswa Sertifikasi</li>
-                    <li>Beasiswa Stimulan Khusus</li>
-                  </ol>
-                  <p class="font-weight-bold">* Beasiswa Stimulan Khusus Terdiri atas:</p>
-                  <ol>
-                    <li>Miskin</li>
-                    <li>Anak Berkebutuhan Khusus</li>
-                    <li>Daerah 3T</li>
-                    <li>Anak Dan Atau Cucu Veteran</li>
-                    <li>Anak Korban KDRT</li>
-                    <li>Hafidz Atau Hafidzah</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="alert alert-info">
-                Hubungi Tim Dukungan Teknis: 085246937000
-              </div>
-            </div>
-          </div>
-          
         </section>
       </div>
       <footer class="main-footer">
@@ -315,7 +314,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="js/stisla.js"></script>
-  <script src="https://kit.fontawesome.com/39f6e58ccc.js" crossorigin="anonymous"></script>
 
   <!-- JS Libraies -->
   <script src="node_modules/simpleweather/jquery.simpleWeather.min.js"></script>
@@ -324,6 +322,7 @@
   <script src="node_modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
   <script src="node_modules/summernote/dist/summernote-bs4.js"></script>
   <script src="node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="https://kit.fontawesome.com/39f6e58ccc.js" crossorigin="anonymous"></script>
 
   <!-- Template JS File -->
   <script src="js/scripts.js"></script>
