@@ -15,13 +15,12 @@
   <link rel="stylesheet" href="node_modules/weathericons/css/weather-icons.min.css">
   <link rel="stylesheet" href="node_modules/weathericons/css/weather-icons-wind.min.css">
   <link rel="stylesheet" href="node_modules/summernote/dist/summernote-bs4.css">
-  <link rel="stylesheet" href="node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css">
 
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
+  
 </head>
 
 <body>
@@ -206,90 +205,98 @@
                 <h1>Satuan Pendidikan</h1>
             </div>
             <div class="row">
-                <div class="col-12 d-flex justify-content-between btn-grup">
-                    <a href="asset/template_satuan_pendidikan_ori.xlsx" class="btn btn-icon icon-left btn-warning align-self-center mb-2" download="template-satuan-pendidikan_ori"><i class="fas fa-download"></i> Download Template Dokumen Satuan Pendidikan</a>
-                    <a href="upload-satuan.html" class="btn btn-icon icon-left btn-success align-self-center mb-2"><i class="fa-solid fa-file-excel"></i> Upload Excel Satuan Pendidikan</a>
-                    <a href="tambah-satuan.html" class="btn btn-icon icon-left btn-primary align-self-center mb-2"><i class="far fa-edit"></i> Tambah Satuan Pendidikan</a>
-                </div>
-            </div>
-            <div class="row mt-5">
                 <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                          <div class="mb-5">
-                            <a href="#" class="btn btn-icon shadow-sm icon-left btn-success mr-4 mb-2"><i class="fa-solid fa-file-excel"></i> Excel</a>
-                            <a href="#" class="btn btn-icon shadow-sm icon-left btn-dark mb-2"><i class="fas fa-print"></i> Print</a>
-                          </div>
-                          <div class="table-responsive">
-                            <table class="table table-bordered table-satuan" id="table-1">
-                              <thead>
-                                <tr class="bg-primary">
-                                  <th>NO</th>
-                                  <th>SATUAN PENDIDIKAN</th>
-                                  <th>NPSN</th>
-                                  <th>NAMA OPERATOR</th>
-                                  <th>KONTAK OPERATOR</th>
-                                  <th>PASSWORD</th>
-                                  <th width="20%">ACTION</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td class="text-center">
-                                    1
-                                  </td>
-                                  <td>MI DARRUL MUTTAQIN</td>
-                                  <td>70029034</td>
-                                  <td>Ari Saputra, M.Pd</td>
-                                  <td>081254721794</td>
-                                  <td>99108904</td>
-                                  <td class="text-center">
-                                    <a href="lihat-satuan.html" class="btn btn-icon btn-success"><i class="fas fa-eye"></i></a>
-                                    <a href="edit_satuan.html" class="btn btn-icon btn-info"><i class="far fa-edit"></i></a>
-                                    <a href="#" class="btn btn-icon btn-warning"><i class="fas fa-print"></i></a>
-                                    <a href="#" class="btn btn-icon btn-danger"><i class="fas fa-trash"></i></a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-center">
-                                    2
-                                  </td>
-                                  <td>MTSS NURUL MUSTHAFA AL HUSAINI</td>
-                                  <td>70029034</td>
-                                  <td>Ari Saputra, M.Pd</td>
-                                  <td>081254721794</td>
-                                  <td>99108904</td>
-                                  <td class="text-center">
-                                    <a href="#" class="btn btn-icon btn-success"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="btn btn-icon btn-info"><i class="far fa-edit"></i></a>
-                                    <a href="#" class="btn btn-icon btn-warning"><i class="fas fa-print"></i></a>
-                                    <a href="#" class="btn btn-icon btn-danger"><i class="fas fa-trash"></i></a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="text-center">
-                                    3
-                                  </td>
-                                  <td>MI DARRUL MUTTAQIN</td>
-                                  <td>70029034</td>
-                                  <td>Ari Saputra, M.Pd</td>
-                                  <td>081254721794</td>
-                                  <td>99108904</td>
-                                  <td class="text-center">
-                                    <a href="#" class="btn btn-icon btn-success"><i class="fas fa-eye"></i></a>
-                                    <a href="#" class="btn btn-icon btn-info"><i class="far fa-edit"></i></a>
-                                    <a href="#" class="btn btn-icon btn-warning"><i class="fas fa-print"></i></a>
-                                    <a href="#" class="btn btn-icon btn-danger"><i class="fas fa-trash"></i></a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
+                  <div class="card card-success">
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="name">Nama Satuan Pendidikan <strong class="text-danger">*</strong></label>
+                              <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="npsn">NPSN <strong class="text-danger">*</strong></label>
+                                <input type="number" class="form-control" id="npsn">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="bentuk_pdd">Bentuk Pendidikan <strong class="text-danger">*</strong></label>
+                                <select class="custom-select">
+                                    <option selected>--Pilih Bentuk Pendidikan--</option>
+                                    <option value="1">SLB</option>
+                                    <option value="2">SMA</option>
+                                    <option value="3">SMK</option>
+                                    <option value="4">SMAg.K</option>
+                                    <option value="5">SMTK</option>
+                                    <option value="6">MA</option>
+                                    <option value="7">MTS</option>
+                                    <option value="8">MI</option>
+                                    <option value="9">SD</option>
+                                    <option value="10">PKBM  </option>
+                                    <option value="11">SKB</option>
+                                    <option value="12">PESANTREN</option>
+                                  </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="bentuk_pdd">Status Sekolah <strong class="text-danger">*</strong></label>
+                                <select class="custom-select">
+                                    <option selected>--Pilih Status Sekolah--</option>
+                                    <option value="1">Negeri</option>
+                                    <option value="2">Swasta</option>
+                                  </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="alamat">Alamat <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="alamat">
+                            </div>  
+                            <div class="form-group col-md-6">
+                                <label for="kabkot">Kabupaten/Kota <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="kabkot">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="kecamatan">Kecamatan <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="kecamatan">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="kelurahan">Kelurahan/Desa <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="kelurahan">
+                            </div>
                         </div>
-                      </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="kode_pos">Kode Pos <strong class="text-danger">*</strong></label>
+                                <input type="number" class="form-control" id="kode_pos">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lintang">Lintang <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="lintang">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="bujur">Bujur <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="bujur">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="kepala_sekolah">Nama Kepala Sekolah <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="kepala_sekolah">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="operator">Nama Operator <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="operator">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email_operator">Email Operator <strong class="text-danger">*</strong></label>
+                                <input type="text" class="form-control" id="email_operator">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="no_operator">No Hp Operator <strong class="text-danger">*</strong></label>
+                                <input type="number" class="form-control" id="no_operator">
+                            </div>
+                        </div>
+
+                      <a href="#" class="btn btn-primary mt-3">Ubah</a>
+                      <a href="satuan-pendidik.html" class="btn btn-warning mt-3">Batal</a>
+                    </div>
+                  </div>
                 </div>
             </div>
-
         </section>
       </div>
       <footer class="main-footer">
@@ -316,15 +323,10 @@
   <script src="node_modules/summernote/dist/summernote-bs4.js"></script>
   <script src="node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
   <script src="https://kit.fontawesome.com/39f6e58ccc.js" crossorigin="anonymous"></script>
-  <script src="node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
-  <script src="node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script src="node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js"></script>
 
   <!-- Template JS File -->
   <script src="js/scripts.js"></script>
   <script src="js/custom.js"></script>
 
-  <!-- Page Specific JS File -->
-  <script src="js/page/modules-datatables.js"></script>
 </body>
 </html>
